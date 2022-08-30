@@ -1,0 +1,89 @@
+$wid: 100%;
+.side {
+  width: $wid;
+  padding-top: 20px;
+  .SideBrand {
+    width: $wid;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    background-color: #25a4bb;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 12%);
+    @mixin font-style{
+      text-align: center;
+      line-height: 2em;
+      color: white;
+    }
+    .header-name {
+      & > a {
+        display: block;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+        @include font-style;
+      }
+    }
+    .header-info{
+      @include font-style;
+    }
+  }
+  .side-nav{
+    width: $wid;
+  }
+  .side-user{
+    position: relative;
+    width: $wid;
+    max-height: max-content;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    .user-avatar{
+      width: 50px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .user-name{
+      h3{
+        text-align: center;
+        line-height: 1.0rem;
+        font-weight: 600;
+      }
+    }
+    .user-state{
+      display: flex;
+      justify-content: center;
+      &>div{
+        padding: 10px;
+        p{
+          margin-top: 5px;
+          color: #999;
+        }
+      }
+      .user-articles{
+        border-right: 1px solid #eee;
+      }
+      h3{
+        text-align: center;
+      }
+    }
+    .user-link{
+      display: flex;
+      justify-content: center;
+      a{
+        display: block;
+        color:#999999 ;
+        font-size: 14px;
+        max-height: max-content;
+        line-height: 32px;
+        svg{
+          vertical-align: middle;
+          width: 18px;
+        }
+        span{
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
